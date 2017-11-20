@@ -21,8 +21,14 @@ a default install.
 
 Still deciding on tool-chain.  Need something that works on windows and Linux.
 Need to ask Rene what he is using, would need a good reason to use something differnet.
+
 [SW4STM32](http://www.st.com/content/st_com/en/products/development-tools/software-development-tools/stm32-software-development-tools/stm32-ides/sw4stm32.html) is based on GCC + Eclipse
+
 [STM-STUDIO-STM32](http://www.st.com/content/st_com/en/products/development-tools/software-development-tools/stm32-software-development-tools/stm32-performance-and-debuggers/stm-studio-stm32.html) uses STLINK to monitor RAM variables in real time - might be handy.  Windows only.  Not needed for build, just for testing.
+
+ST-LINK/V2 connects PC to UUT, allows FLASH programming and debugging, costs about $22 from Mouser.
+
+ST-LINK/V2-ISOL does the same with 1000V isolation, costs $78.  Might be nice for debugging the power board, although I could use an isolation transformer and ground the negative bus.
 
 
 ## Hardware
@@ -61,5 +67,6 @@ Functions on the board include:
 * Output voltage measurement
 
 Might be able to use a power board in reverse as an AFE.  Would need filter components and line phase sensing.  But increased power factor would be nice, regen would be nice too.
+
 Might be able to use a power board to switch a braking resistor.  Or I could build a braking resistor switch into the board to avoid needing another module just for that.  Or I could incorporate the braking resistor switch with a rectifier module...  need to weigh pros and cons of each approach.
 
