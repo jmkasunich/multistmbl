@@ -56,12 +56,12 @@ The power board is very similar to the STMBL power board, with the following exc
 
 Functions on the board include:
 * External +15V is used for gate drive and high-side bootstrap drive.
-* Exterbal +15V is stepped down (buck converter) to +3.3V for processor.
-* USB port for ?? (dangerous on un-isolated power)
-* JTAG/Debug port (dangerous on un-isolated power)
+* External +15V is stepped down (buck converter) to +3.3V for processor.
+* USB port for ?? (dangerous on un-isolated power), probably won't populate but leave on artwork.
+* JTAG/Debug port (dangerous on un-isolated power), plan on using isolated ST-LINK.
 * High-speed UART link to controller board - isolated.  Maybe differential (RS422)
 * HIgh and low side gate drivers
-* current feedback with low side shunts (no high-side ground fault protection - calculated risk)
+* Current feedback with low side shunts (no high-side ground fault protection - calculated risk)
 * Low side IOC using internal comparators
 * Bus voltage measurement
 * Output voltage measurement
