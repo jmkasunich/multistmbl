@@ -70,3 +70,10 @@ Might be able to use a power board in reverse as an AFE.  Would need filter comp
 
 Might be able to use a power board to switch a braking resistor.  Or I could build a braking resistor switch into the board to avoid needing another module just for that.  Or I could incorporate the braking resistor switch with a rectifier module...  need to weigh pros and cons of each approach.
 
+#### Voltage Clearances
+Design to 68100-5 standard.
+I am going to assume polution degree 2, overvoltage catagory III.  System voltage is 300V (240V AC is in the 300V catagory).
+Table 7 in section 4.3.6.1.5 of the spec says impulse voltage is 4000V anmd temporary overvoltage is 2120 peak, 1500 RMS.
+Table 9 in section 4.3.6.4.1 has clearance distances.  For insulation between circuit and surroundings, temporary overvoltage and impulse voltage both require 3.0mm.  For functional insulation within the power circuit, repetitive peak is the limiting factor.  we could in principle use 0.5mm, but I am going to use a minimum of 0.8mm, with 1.5mm preferred.  For reinforced insulation between power and user accessible low voltage both impulse (one step up) and temporary overvoltage (1.6x) require 5.5mm.
+Table 10 in section 4.3.6.5.2 as creepage distances.  Creepage considers only RMS working voltage, so I believe the limiting factor is the DC bus - RMS value of a DC voltage is that voltage.  Assuming rectified 240V line gives 340V DC.  Table 10 allows interpolation, so for pollution degree 2 on a board the creepage is 1.7mm.  Creepages are doubled for reinforced insulation, giving 3.4mm.
+Choosing the larger of creepage and clearance for each use case results in these final design rules:  1.7mm between power traces, 3.0mm trace to ground, and 5.5mm trace to user-accessible low voltage.  In inches, those values are 67 mils, 118 mils, and 217 mils.
