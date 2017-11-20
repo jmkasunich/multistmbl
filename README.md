@@ -1,9 +1,9 @@
-## MultiSTMBL
+# MultiSTMBL
 
 MultiSTMBL is a modular version of the STMBL servo drive.
 The goal is to minimize cost per axis.  The target motors are
 Yaskawa servos with serial absolute encoders, although other
-motors may be accomadated as well.  The main cost reduction will be
+motors may be supported as well.  The main cost reduction will be
 as a result of assuming multiple axes, and sharing as many common
 resources as possible between axes.
 
@@ -17,11 +17,11 @@ current magnitude commands to the F3 controller over a fast serial
 link.
 
 Most of the hardware cost in a STMBL drive is the F4 controller and
-its rather extensive and very flexible mix if I/O.  The MultiSTMBL
-project hope to amortize that costs over multiple axes.  The project
+its rather extensive and very flexible mix of I/O.  The MultiSTMBL
+project hopes to amortize that cost over multiple axes.  The project
 will have two boards - a power board with an F3 controller that is very
 similar to the STMBL power section, and a control board with an F4
-controller that is capable of running MULTIPLE power boards.  The 
+controller that is capable of running *multiple* power boards.  The 
 exact number of power boards per control board will depend on chip 
 resources, but will be a minimum of three.
 

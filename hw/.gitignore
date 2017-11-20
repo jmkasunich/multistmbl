@@ -1,0 +1,20 @@
+# ignore backups
+*.bak
+*.bck
+*.kicad_pcb-bak
+
+# ignore cache library
+*cache.lib
+
+# netlists are generated from the schematic
+*.net
+
+# xml BOM is generated from the schematic/board
+*.xml
+
+# design rule check report
+*.erc
+
+# all kicad generated files
+*/output
+
