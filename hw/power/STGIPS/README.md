@@ -1,4 +1,4 @@
-#STGIPS POWER BOARD#
+# STGIPS POWER BOARD
 
 This power board is designed around the STMicro STGIPSxxC60T-H series of Intelligent Power Modules.
 
