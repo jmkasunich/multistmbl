@@ -1,3 +1,8 @@
 EESchema-DOCLIB  Version 2.0
 #
+$CMP L
+D Inductor
+K inductor choke coil reactor magnetic
+$ENDCMP
+#
 #End Doc Library
